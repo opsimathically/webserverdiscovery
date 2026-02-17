@@ -1,12 +1,12 @@
 {
-  "name": "@opsimathically/set_project_name",
+  "name": "@opsimathically/webdiscovery",
   "version": "0.0.1",
-  "description": "Set project description.",
+  "description": "Provided a set of hosts and ports, check services to determine if they are likely to be web services, and optionally try to determine underlying technologies.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npx ts-to-zod && tsup",
+    "build": "npx ts-to-zod --all && tsup",
     "test": "node --require ts-node/register --require tsconfig-paths/register --test test/**/*.test.ts",
     "ts-to-zod": "npx ts-to-zod",
     "docs": "typedoc"
@@ -14,7 +14,7 @@
   "keywords": [
     "set_keywords"
   ],
-  "homepage": "https://github.com/opsimathically/set_project_name",
+  "homepage": "https://github.com/opsimathically/webdiscovery",
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.19.1",
@@ -37,12 +37,13 @@
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opsimathically/set_project_name.git"
+    "url": "git+https://github.com/opsimathically/webdiscovery.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
+    "@opsimathically/safe": "^0.0.1",
     "@swc/core": "^1.11.24",
     "@types/command-line-args": "^5.2.3",
     "@types/command-line-usage": "^5.0.4",
